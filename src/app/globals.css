@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* styles.css */
+@media print {
+  .paper-header {
+    top: 0;
+    width: 90%;
+    z-index: 1000;
+    position: relative;
+  }
+  @page {
+    size: A4 landscape;
+  }
+  .table-header {
+    display: table-header-group;
+  }
+  .page-break {
+    display: block;
+    page-break-before: always;
+  }
+  
+  body {
+    margin: 0;/* Adjust based on the height of your header */
+    padding: 1rem;
+  }
+
+}
+
+body {
+  /* color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+  font-family: "Inter";
+  box-sizing: 0;
+}
+
+.a2-horizontal {
+  line-height: 1.2rem;
+  font-size: 0.75rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+/* over write the search btn on Nav */
+.css-6hp17o-MuiList-root-MuiMenu-list {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.slick-slider {
+  overflow: hidden;
+  cursor: pointer;
+}

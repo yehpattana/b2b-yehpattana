@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  app:
+    container_name: nextts-app
+    image: node:18-alpine
+    working_dir: /usr/src/app
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      NEXT_PUBLIC_API_BASE_URL: "http://localhost:8080/v1/"
+      PAYPAL_CLIENT_ID: "ATDMRA8QPlJgutxSViO0JK4OyMB0DzWbZswXyXlmYvrp8qMRoOyn4Pt78Wv5_Z_qiEOX8AXvkUApXtMp"
+      PAYPAL_CLIENT_SECRET: "EIzIyFNzyIjM4v8UufxJhd5pOOEAgQ-Elh7bNc5JNN1rzFu13arClmRosQEXgbQ2u631Sgs1vbI3bDO0"
+      NEXT_PUBLIC_PAYPAL_CLIENT_ID: "ATDMRA8QPlJgutxSViO0JK4OyMB0DzWbZswXyXlmYvrp8qMRoOyn4Pt78Wv5_Z_qiEOX8AXvkUApXtMp"
+    command: sh -c "npm install && npm run dev"
+    networks:
+      - nextts-net
+
+networks:
+  nextts-net:
+    driver: bridge

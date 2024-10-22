@@ -1,0 +1,12 @@
+{
+  "greeting": "Hello, welcome to our website!",
+  "navBarTitle": {
+    "mainTitle": ["SPORT", "TEAMWEAR", "ARTIMARZIALI", "SPORTSTYLE"],
+    "subTitle": [
+      "FOOT WEAR",
+      " RUNNING APPAREL",
+      "ARTI ACCESSORIES",
+      "MULTITRAINING APPAREL"
+    ]
+  }
+}
